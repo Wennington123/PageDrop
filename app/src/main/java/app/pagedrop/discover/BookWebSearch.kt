@@ -34,11 +34,19 @@ object BookWebSearch {
             }
         }
         val shadow = includeShadowLibraries
+        val brazilianOpenAccess = listOf(
+            BookSearchLink("SciELO Brasil", "https://search.scielo.org/?q=$q", "Search Brazilian open-access scientific articles on the website"),
+            BookSearchLink("Redalyc", "https://www.redalyc.org/busquedaArticuloFiltros.oa?q=$q", "Search Ibero-American open-access journals; includes Brazilian content"),
+            BookSearchLink("BDTD", "https://bdtd.ibict.br/vufind/Search/Results?lookfor=$q&type=AllFields", "Search Brazilian theses and dissertations on the website"),
+            BookSearchLink("Portal Domínio Público", "https://dominiopublico.mec.gov.br/", "Search Brazilian public-domain books and documents on the website"),
+            BookSearchLink("Biblioteca Brasiliana USP", "https://digital.bbm.usp.br/handle/bbm/1", "Search the Brazilian digital collection; historical books and documents"),
+            BookSearchLink("Lume (UFRGS)", "https://lume.ufrgs.br/", "Search the UFRGS digital repository; theses, dissertations and articles"),
+        )
         return fallbacks + listOfNotNull(
             BookSearchLink("ePustakalay", "https://epustakalay.com/search_gcse/?q=$q", "Hindi and Indian-language books; search on the website"),
             if (shadow) BookSearchLink("Anna’s Archive", "https://annas-archive.gl/search?q=$q", "Shadow-library search; availability and download access vary") else null,
             BookSearchLink("Global Grey", "https://www.google.com/search?q=${TextUtil.enc("site:globalgreyebooks.com ${TextUtil.cleanQuery(query)}")}", "Search Global Grey’s English classics through its Google site search"),
             if (shadow) BookSearchLink("OceanofPDF", "https://oceanofpdf.com/", "Search for “${TextUtil.cleanQuery(query)}” on the website; automated access is blocked") else null,
-        )
+        ) + brazilianOpenAccess
     }
 }

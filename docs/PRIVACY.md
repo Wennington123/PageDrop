@@ -75,7 +75,7 @@ The "Get your Kindle ready" walkthrough opens pages on [kindlemodding.org](https
 
 Search results can show website shortcuts. They do nothing until you tap one. Then the site opens in PageDrop's built-in browser, which is a WebView with JavaScript switched on, and the site sees you as any browser would.
 
-- Global Grey (through a Google search, so `google.com` sees the query), ePustakalay, and, when a built-in source above can't be searched, its website (for example ManyBooks, Faded Page, Hindwi or Rekhta)
+- Global Grey (through a Google search, so `google.com` sees the query), ePustakalay, the Brazilian open-access repositories (SciELO Brasil, Redalyc, BDTD, Portal Domínio Público, Biblioteca Brasiliana USP and Lume/UFRGS), and, when a built-in source above can't be searched, its website (for example ManyBooks, Faded Page, Hindwi or Rekhta)
 - Anna's Archive and OceanofPDF, only if you switch on "Show shadow-library search shortcuts" in Settings → Book sources (off by default)
 
 Cookies from the sites you visit are stored in the app's browser. When you download a book from a site you are browsing, PageDrop sends that site's cookies with the download request to the same site. Clearing PageDrop's app data (Android Settings → Apps → PageDrop → Storage) removes them.
